@@ -1,0 +1,1627 @@
+                                                               
+                                                               Data Structures & Algorithms:
+
+
+Data Structures are methods that simply store data.
+
+Algorithms are used for solving problems. For example finding the shortest path from point A to B.
+
+
+Arrays :  Collection of items of a single type. Example : [ 5, -2, 300, 20] this is an array of integers. Or ["yeahhh", "ouch", "haha"] this is an array of strings. 
+
+List : Most widely used data structure ; grows and shrinks size as needed ; sequence type ; sortable.
+
+Tuple : Immutable (can't add / change items) ; useful for fixed data ; faster than lists; sequence type.
+
+Set : Store non-duplicate items ; very fast access vs Lists ; math ops (union, intersect).
+
+Dict : Key/ Value pairs ; Associate array, like Java HashMap ; Unordered .
+
+
+I.Sequences : They include strings, lists, and tuples.
+
+1. Indexing : Access any item in the sequence using its index.
+
+Example :
+
+x = 'frog'
+
+print (x[3])             # prints 'g'
+
+Since 'f' is index 0 , 'r' is 1 , 'o' is 2 , 'g' is 3.
+
+Example 2 :
+
+x = ['pig', 'cow', 'horse']
+
+print (x[1])             # prints 'cow'
+
+This is similiar to the previous example but in Lists the way indexing works is by taking the whole string in the first value of the list.
+
+2. Slicing
+
+Example : 
+
+x = 'computer'
+
+x[1:4]                    #prints 'omp'
+
+This takes the index 1 to 4 without index 4 so 1 to 3 in this example.
+
+Example 2 :
+
+x[1:6:2]                   # prints 'opt'
+
+The :2 in the end is called a 'step' since it shows how much the value skips. In this case it will count and skip by 2 .
+
+Example 3 :
+
+x[3:]                      # prints 'puter'
+
+The blank after the ':' means till the end in this example it means print every index from 3 to the end.
+
+Example 4 :
+
+x[:5]                      # prints 'compu'
+
+The blank before the ':' means everything before it. In this example it means to print every index from 0 till 5 without 5.
+
+Example 5 :
+
+x[-1]                      # prints 'r'
+
+This means to print out the last item.
+
+Example 6 :
+
+x[-3]                      # prints 'ter'
+
+This means to print out the last three items.
+
+Example 7 :
+
+x[:-2]                     # prints 'comput'
+
+This means to print out all the items except the last two items.
+ 
+3. Adding / Concatenating
+
+- Combines 2 sequences of the same type using '+'
+
+Example : 
+
+x = 'horse' + 'shoe'
+
+print(x)                   # prints 'horseshoe'
+
+Example 2 :
+
+x = ['pig', 'cow'] + ['horse']
+
+print(x)                   # prints ['pig', 'cow', 'horse']
+
+4. Multiplying
+
+- Multiply a sequence using *
+
+Example : 
+
+x = 'big' * 3
+
+print(x)                   # prints 'bugbugbug'
+
+Example 2 :
+
+x = [8, 5] * 3
+
+print(x)                   # prints [8, 5, 8, 5, 8, 5]
+
+5. Checking Membership
+
+- Test whether an item is in or not in a sequence
+
+Example : 
+
+x = 'bug'
+
+print('u' in x)            # prints True
+
+Example 2 :
+
+x = ['pig', 'cow', 'horse']
+
+print('cow' not in x)      # prints False
+
+6. Iterating 
+
+- Iterate through the items in a sequence
+
+Example :
+
+x = [7, 8, 3]
+
+for item in x :
+	print(item * 2)    # prints 14, 16, 6
+
+Example 2 :
+
+x = [7, 8, 3]
+
+for index, item in enumarate(x):
+	print (indext, item)           # prints 0 7, 1 8, 2 3
+
+7. Number of Items
+
+- Count the number of items in a sequence
+
+Example :
+
+x = 'bug'
+
+print(len(x))               # prints 3
+
+Example 2 :
+
+x = ['pig', 'cow', 'horse']
+
+print(len(x))               # prints 3
+
+8. Minimum 
+
+- Finds the minimum item in a sequence lexicographically.
+- alpha or numeric types, but cannot mix types.          
+
+Example : 
+
+x = 'bug'
+
+print(min(x))               # prints 'b'
+
+Example 2 :
+
+x = ['pig', 'cow', horse]
+
+print(min(x))               # prints 'cow'
+
+9. Maximum
+
+- Finds the maximum item in a sequence lexicographically.
+- alpha or numeric types, but cannot mix types.          
+
+Example : 
+
+x = 'bug'
+
+print(max(x))               # prints 'u'
+
+Example 2 :
+
+x = ['pig', 'cow', 'horse']
+
+print(max(x))               # prints 'pig'
+
+10. Sum
+
+- Find the sum of items in a sequence
+- Entire sequence must be numeric type
+
+Example :
+
+x = [5, 7, 'bug,]
+
+print(sum(x))               # Error!!!!
+
+Example 2 : 
+
+x = [2, 5, 8, 12]
+
+print(sum(x))               # prints 27
+print(sum(x[-2:]))          # prints 20
+
+11. Sorting 
+
+- Returns a new list of items in sorted order
+- Does not change the original list
+
+Example :
+
+x = 'bug'
+
+print(sorted(x))             # prints ['b', 'g', 'u']
+
+Example 2 :
+
+x = ['pig', 'cow', 'horse']
+
+print(sorted(x))             # prints ['cow', 'horse', 'pig']
+
+12. Count (item)
+
+- Returns count of an item
+
+Example :
+
+x = 'hippo' 
+
+print(x.count('p'))          # prints 2
+
+Example 2 :
+
+x = ['pig', 'cow', 'horse', 'cow']
+
+print(x.count('cow'))        # prints 2
+
+13. Unpacking
+
+- Unpack the n items of a sequence into n variables
+
+x = ['big', 'cow', 'horse']
+
+a, b, c = x            # now 'a' is 'pig' and 'b' is 'cow' and c is 'horse
+ 
+Note : THe number of variables must exactly match the length of the list
+
+II.Lists
+
+1. Constructors - Creating a New List :
+
+There are many ways to create lists we can use :
+
+x = list()
+x = ['a', 25, 'dog', 8.43]
+x = list(tuple1)
+
+List Comprehension :
+
+x = [m for m in range(8)]
+	resulting list:[0, 1, 2, 3, 4, 5, 6, 7]
+
+x = [z**2 for z in range(10) if z>4]
+	resulting list:[25, 36, 49, 64, 81]
+
+2. Delete
+
+- Delete a list or an item from a list
+
+Example :
+
+x = [5, 3, 8, 6]
+
+del(x[1])                # prints [5, 8 ,6]
+
+del(x)                   # deletes list x
+
+3. Append
+
+- Append an item to a list
+
+Example : 
+
+x = [5, 3, 8, 6]
+x.append(7)              # [5, 3, 8, 6, 7]
+
+4. Extend
+
+- Append a sequence to a list
+
+Example : 
+
+x = [5, 3, 8, 6]
+y = [12, 13]
+x.extent(y)              # [5, 3, 8, 6, 7, 12, 13]
+
+5. Insert 
+
+- Insert an item at givem index          # x.insert(index, item)
+
+Example : 
+
+x = [5, 3, 8, 6]
+x.insert(1, 7)            # [5, 7, 3, 8, 6]
+
+x.insert(1,['a', 'm'])    # [5, ['a', 'm'], 7, 3, 8, 6]
+
+6. Pop
+
+- Pops off the lat item of the list and returns it.
+
+x = [5, 3, 8, 6]
+x.pop()              # [5, 3, 8]
+		     # and returns the 6
+
+print(x.pop())       # prints 8
+		     # x is noq [5, 3]	
+7. Remove 
+
+- Removes the first instance of an item
+
+Example :
+
+x = [5, 3, 8, 6, 3]
+
+x.remove(3)             # [5, 8, 6, 3]
+
+Example 2 :
+
+x = [5, 3, 8, 6]
+
+x.remove(3)             # [5, 8, 6]
+
+8. Reverse
+
+- Reverses the order od the list
+
+x = [5, 3, 8, 6]
+
+x.reverse()              # [6, 8, 3, 5]
+
+9. Sort 
+
+- Sort the list in place
+
+x = [5, 3, 8, 6]
+
+x.sort()                # {3, 5, 6, 8]
+
+Note : soreted(x) returns a new sorted list without changing the original list x. x.sort() puts the items of x in sorted order (sorts in place).
+
+III. Tuples
+
+- Support all operations for Sequences.
+
+- Immutable, but member objects may be mutable.
+
+- If the contents of a list shouldn't change, use a tuple to prevent items from accidently being added, changed or deleted.
+
+- Tuples are more efficient than lists due to Python's implementation. 
+
+1. Constructors - Creating a New Tuple : 
+
+x = ()                 # no-item tuple
+
+x = (1, 2, 3)          
+
+x = 1, 2, 3            # parenthesis are optional
+
+x = 2,                 # single-item tuple
+
+x = tuple(list1)       # tuple from list
+
+2. Immutable 
+
+- But member objects may be mutable
+
+Example :
+
+x = (1, 2, 3)
+
+del(x[1])              # Error!!!
+x[1] = 8	       # Error!!!
+
+Example 2 :
+
+x = ([1, 2], 3)        # 2-item tuple : list and int
+
+del(x[0][1])           # ([1], 3)
+
+IV. Sets
+
+1. Constructors - Creating a New Set
+
+x = {3, 5, 3, 5}                # {5, 3}	
+
+x = set()                       # empty set
+
+x = set(list1)                  # new set from list
+                                # strips duplicates
+
+Set Comprehension :
+
+x = { 3 *x for x in range(10) if x>5)
+	resluting set:{18, 21, 24 ,27) but in random order
+
+2. Basic Set Operations
+
+Add item to set x : x.add(item)
+
+Remove item from set x : x.remove(item)
+
+Get length of set x : len(x)
+
+Check membership in x : item in x            item not in x
+
+Pop random item from set x :  x.pop()
+
+Delete all items from set x : x.clear()
+
+3. Standard Mathematical Set Operations
+
+  Set Funtion              Description               Code
+
+ Intersection		      AND		 set1 & set2
+
+    Union                     OR                 set1 | set2
+
+Symmetric Difference          XOR                set 1 ^ set2
+   
+  Difference         In set1 but not in set2 	 set1 - set2
+
+   Subset               set2 contains set1       set1 <= set2
+
+   Superset             set1 contains set2       set1 >= set2
+
+V. Dictionaries ( Dict)
+
+1. Constructors - Creating a New Dict
+
+x = {'pork':25.3, 'beef':33.8, 'chicken':22.7}
+x = dict([('pork', 25.3), ('beef', 33.8), ('chicken', 22.7)])
+x = dict(pork=25.3, beef=33.8, chicken=22.7)
+
+2. Basic Dict Operations : 
+
+Add or change item in dict x : x['beef'] = 25.2
+
+Remove item from dict x : del x['beef']
+
+Get length of dict x : len(x)
+
+Check membership in x ( on;y looks in keys, not values) :  item in x      item not in x
+
+Delete all items from dict x : x.clear()
+
+Delete dict x : del x
+
+3. Accessing Keys and Values in a Dict:
+
+x.keys()      # returns list of keys in x
+
+x.values      # returns list of values in x
+
+x.items()     # returns list of key-value uple pairs in x
+
+
+item in x.values    # tests membership in x: returns boolean 
+
+4. Iterating a Dict: 
+
+for key in x:                       # iterate keys
+	
+	print(key, x[key])          # print all key/value pairs
+
+for k, v in x.items() :             # iterate key/value pairs
+
+	print(k, v)                 # print all key/value pairs
+
+Note : Entries in a dict are in random order
+
+   #Big 'O' Notation
+
+- A way to basically "score: a data structure based on 4 criteria
+
+- The most common functions you might want from a data structure : 
+        
+  - Accessing elements
+
+  - Searching for an element
+
+  - Inserting an element
+
+  - Deleting an element
+
+-By measuring how efficiently a data structure we can do these 4 things 
+
+  - We create a 'report card' which means that we check if its quick at accessing or slow at inserting and figure out which we want in our project.
+
+  - A time complexity equation works by inserting the size of thedata-set as an integer n, and returning the number of operations that need to be conducted by the 
+    computer before the function can finish.
+
+      n = The size of the data set (Amount of elements contained within the data structure)
+
+  - We always use the worst-case scenario when judging these data structures.
+
+-It's called BigO notation because the syntax for the Time Complexity equations includes a BigO and then a set of parentheses ( The parentheses houses the function)
+
+-The larger a data set the more operations it will take
+
+-Measuring Efficiency with BigO Notation - Why BigO?
+
+  - We measure efficiency in number of operations because measuring how long the function takes to run would be silly.
+
+     - Measuring by time is baised towards better hardware.
+
+- Summary : We measure the efficiency based on 4 metrics (accessing, searching, inserting, deleting) They are all modeled by an equation which takes in size of
+   data-set (n) and returns number of operations needed to be performed by the computer to complete that task.
+
+- A data structure's efficiency isn't the end all be all for deciding on which data structure to use in your program 
+  
+   - Some have specific quarks or features which seperate them from the rest and provides additional functionalities.
+
+- Measuring Effiecieny with BigO Notation - Types of Time Complexity Equations
+
+   - Let's dive straight into what the actual equations mean in terms of efficiency 
+
+          - 6 most common Time Complexity Equations  : O(1) ,  O(n) , O(log n) , O(n log n) , O(n^2) , O(2^n).   Most efficient ---> Least efficient
+
+   - The absolute best a data structure can 'score' on each criteria is O(1) 
+
+          - No matter the size of out data set is, the task will be completed in a single instruction. O(1) finishes anything in 1 step no matter it's size.
+
+   - The next fastest type of time complexity equation is O(log n)
+
+          - Still provides fast completion time
+                                                                                  
+          - Gets more efficient as the size of the data set increases. 
+
+   - The next common time complexity efficiency equation type that's going to come up is O(n)
+
+          - The last of the 'decent' equations. It's graph is linear meaning that it will take the same number of operations as the number of data sets.
+
+   - The next type of equation that will come up is O(n log n)
+
+          - The first which is relatively bad in terms of efficency. The graph's slope increases with the increase in the volume of sets.
+
+   - The last 2 types of equations are O(n^2) and O(2^n)
+
+          - Very bad in terms of efficiency
+
+          - Exponential in structure
+
+          - They both should be avoided because they are inefficient
+
+   - Time Complexity Equations are NOT the on;y metric you should be using the guage which data structure to use
+
+          - Some provide other functionalities that make them extremly useful
+
+ # How to use arrays in data structures
+
+When we create an array we need to have three things : name, type, size. 
+
+- Name is just a name that we give it so we can tell it apart from other things.
+
+- Type means if the array is made of strings or intergers or anything. An array can only contain 1 type of elements.
+
+- Size is when we create an array it will have a size that we choose we can't change the size it will be fixed forever. 
+
+- There are actually 2 different ways to create an array in most languages.
+
+   - Populate the array with elements right then and there (1)
+
+   - Set a specific size for the array, then populate it later (2)
+
+- (1) Defining and filling an array as soon as you create it is used mainly for when you already know which values are going to be held within it.
+
+   - Let's say we want to create an array of 10 employee's saleries. Since we already know the  saliries we can immediately populate the array when we create it.
+
+   - The way to use it in code is (python) : array = [1, 2, 3]. In Java : int array[] = {1, 2, 3};  . In C# : int[] array = {1, 2, 3};
+
+- (2) Creating an array by setting an intianl size for our array, but not filling it with any elements.
+
+   - Slowly populate it as the program runs
+
+   - Used for user-entered information
+
+   - Let's say we have a program that requires user input so we need a place for the information to be stored. There's where we use it.
+
+   - We cannot create this in python since it requires advanced data structures but we can use Java or C# by doing : int array[] = new int[10]; or int[] array = new int[10];
+
+   - We use the [] to tell the computer that we are creating an array and not only a variable.
+
+   - Here we can realize that we are choosing a type for the array in this case it was the 'int' and we choose a name in this case it was array and a size in this case 10
+
+   - This  size is final and cannot be changed.
+
+- Numerical Indexes
+
+   - It's simply an integer which corresponds to an element within the array
+
+   - Suppose we have an array called 'Numbers' with 10 numbers from 1 to 10.
+
+   - To retrieve informations from a certain position from the array we need to reference it using both the array's name and idex number of the element we want.
+                   
+          - print(Numbers[5]) it will print 6 because indexing starts from 0
+
+- Relacing information in an array
+
+   - Referencing an array's index is also how we replace elements within an array.
+
+          - Numbers[9] = 11. It will replace 10 by 11
+
+2-Dimensional Arrays
+
+   - An array within an array  at each index is known as 2-dimensional array.
+
+   - Referencing an element within a 2-dimensional array is mostly the same as 1-dimensional arrays, except you need to now 2 indexes 
+
+           - One for the column and one for the row 
+
+   ------------------------------------------------------------
+   | Index   |    0    |     1     |      2     |      3      |         
+   ------------------------------------------------------------
+   |    0    | 'Steven'|   'Alex'  |   'Dave'   |   'Jake'    |
+   ------------------------------------------------------------
+   |    1    | 'Adam'  |  'Lucas'  |  'Quinten' |   'John'    |
+   ------------------------------------------------------------
+   |    2    | 'Sean'  |  'Marcus' |   'Carl'   |  'Jackson'  |
+   ------------------------------------------------------------
+   |    3    | 'Peter' |   'Cam'   |  'Anthony' |   'Ethan'   |
+   ------------------------------------------------------------      
+
+   If we want to reference Carl we use 2,2 if we want to reference Adam we use 0,1  
+
+- Arrays as a Data Structure
+
+   - Accessing is O(1) since it's very easy in an array because we either populate it while creating it or we put in the size we want it to be.
+  
+   - Searching is O(n) Searching through arrays is O(n) because most of the tome we are working with unsorted lists
+
+            - must use linear search ( Means that it will go through every item until it finds the particular element)
+
+   - Inserting is O(n) because inserting an element with the array rewuires you to shift every element that's after the index you want to insert. Everything will move 1 space to the right.
+   
+   - Deleting is O(n) because deleting an element within the array requires yout to shift every element to the right of the one you want to delete down one index.
+    
+- Pros and Cons of an array
+
+   - Pros : Good for storing similiar contiguous data ; O(1) Accessing power ; Very basic. Easy to learn and master
+
+   - Cons : Size of the array cannot be changes once intialized ; Inserting and deleting are not efficient ; Can be wasting storage space ( Create then populate)
+
+   - Overall, pretty reliable data structure. Has some flaws as well as advantages. Can be used in almost any program if need be, but sometimes you may want extra functionality.
+
+ # ArrayList
+
+- It is a more advanced data structure than an array and has more funcionalities.
+
+- The arrayList, fundamentally, can be thought of as a growing array.
+
+- An arrayLIst is backed by an array.
+
+    - This makes the arrayList have a lot of similiar functionality to an array.
+
+- Intializing an arrayList varies based on the language 
+
+    - In Java : ArrayList<Integer> arrayList = new ArrayList<Integer>();
+
+    - In C# : ArrayList = new ArrayList();
+   
+    - There is no python ArrayList functionality because in pyhton Arrays and ArrayLists aren't seperate entities and they are combined together into a data structure 
+           called 'Python Lists'.
+
+    - 'ArrayList' Will make the type an arrayList and 'arrayList' is just a name so we can refernce it. And the () are the size of the array if left blank this means 
+         that the size of the array is 10. Or we can simply choose the size of the array by putting a value in the parenthesis.
+
+    - In Java : ArrayList<Integer> arrayList = new ArrayList<Integer>(1, 2, 3);      If we try to do this it won't work beacuse arrayList doesn't support this type of decleration
+
+    - In C# : ArrayList = new ArrayList(1, 2, 3);    If we try to do this it won't work beacuse arrayList doesn't support this type of decleration
+
+- An arrayList can be thought of as an evolved array
+
+    - Beefier
+
+    - More functionality
+   
+    - More Powerful
+
+- This is mainly because it belongs to the pre-built arrayList 'class' 
+
+    - Means it has pre-built functions that are at our disposal
+
+- The type of functionality you're going to get is going to vary based on languege.
+
+- ArrayList Methods 
+
+    - Because of the variobility surrounding the arrayLis, we will on;y be covering 6 common methods
+
+         - These methods are : Add Method, Remove Method, Get Method, Set method, Clear Method, toArray Method
+
+    - ArrayList exampleAlist = newArrayList(4);            Add(object)             Add(object, index)
+
+         exampleAList.add(2);  if we run this we will have an array with 2 in it and 3 empty spaces
+
+         exampleAList.add(5);  if we run this we will have an array with 2 in index 0 and 5 in index 1 and 2 empty spaces
+
+         exampleAList.add(1,0); if we run this the code will shift  2 and 5 one space to the right and place 1 in index 0. We will have 1 empty space remaining
+
+         exampleAList.add(3,2); if we run this the code will shift 5 to the right and place 3 in index two and we will have no more empty spaces.
+
+         
+     - Remove Method
+  
+          - The remove method also has 2 different types
+
+                - Remove(Index) Removes the Object at the index you provide 
+
+                - Remove(Object) Removes the first instance of the pbject passed into the arrayList
+
+          - exampleAList.remove(3) will remove the object at index 3
+
+          - The other option will be to do example.AList.remove(new Integer(5)); this will remove the object 5. If ther is no object 5 in the array list it will return false.
+
+       
+     - Get Method
+
+           - The get method is the same as referencing an index for an array    Get(Index)
+
+           - exampleAlist.get(2); will return 3   
+
+     - Set Method
+ 
+           - The set method is how we replace elements within the arrayList.       Set(Index, Object)
+
+           - exampleAList,set(3, 4); this will override the element at position index 3 and replace 5 by 4
+
+      - Clear Method           Clear() 
+         
+           - Clears the arrayList, Deleting every element entirely.
+
+      - toArray Method
+
+           - Used to convert an arrayList to an Array
+
+                    - Converts the arrayList into an array. Must be set equal to the creation of a new array.
+
+                    - Object convertedExample[] = exampleAlist.toArray();
+
+                    - If done correctly you will end up with an array that has all the contents that used to be in arrayList.
+
+                    - Instead of it being an array of integers it will be an array of objects
+
+                    - It will function normally as an array would
+
+                    - The only thing that changes is that it now contains integer objects instead of primitave integer types.
+
+- ArrayList as a Data Structure 
+ 
+    - Accessing is O(1) since every data has a reference stored in it's memory
+
+    - Searching is O(n) since it goes through every object in our ArrayList if it's in the last index it will take n operations.
+
+    - Inserting  Add(Object, Index) and Add(Object) is O(n) since it has to move every object on the right one space.
+
+    - Deleting Remove(Object) and Remove(Index) is O(n) since it has to mve everything back 1 space to fill up the empty space deleted
+
+ # Comparasion Between Arrays and ArrayLists
+
+          Arrays :                      ArrayLists : 
+
+- Fixed Size                         - Dynamic Size (Better)
+
+- Can store all data types (Better)  - Can only store Objects
+
+- Methods need to be created         - Methods are created for you (Better)                              
+
+-Doesn't require much memory to      - Requires more memory use and upkeep
+use or upkeep (Better)   
+
+                             When To Use Them
+ 
+- We need to use arrays in smaller   - More interactive programs where you'll 
+tasks, Where you won't be            be modifying data quite a bit 
+interacting or changing the data
+that often
+
+  # Sequential Access Data Structures :
+
+                              ---> Array--------|
+                                |                 |
+Random Access Data Structures ---                 ------> Sequential Access Data Structures
+                                |                 |
+                                ---> ArrayList ---|
+
+
+The difference between Random Access Data Structures(RDS) and Sequential Access Data Structures(SADS) is that RDS can access information without going through the 
+values before it. It can be thought of as a book where if you want to go to page 80 you can just go to that particular page without going through every single page.
+While SADS needs yo go through every value to get to the value you need. It can be thought of as measurement meter if you want 70 cm you need to go through 1 till 69.
+
+    Random Access Data Structures                    Sequential Access Data Structures
+
+- Provides O(1) Accessing                            - Do not provide O(1) Accessing
+
+- Independent Elements                               - Dependent Elements 
+
+- Arrays and ArrayLists                              - Stacks, Queues, Linked Lists
+
+   # The Stack : 
+
+- A sequential access data structure in which we add elements and remove elements according to the LIFO Principle
+
+       - Last In First Out (LIFO) means that the item we add the last will be the first one retrieved. You can think of it as a stack of books if we want to add books
+         we have to stack them above each other and if we want to put one in the middle we will have to take all the books above the location we want to put the book.
+
+- Common Stack Methods : Push Method, Pop Method, Peek Mwthod, Contains Method.
+
+       - Push(Object) is a method that Pushes an object or element onto the top of the stack. The size will increase dynamically by 1. 
+
+       - Pop() Used to remove an element from the top of the Stack and will return the element on the top.
+
+       - Peek() allows you to get the value at the top of the list without removing it.
+         
+       - Contains(Object) Used for searching through the Stack. It will take  Object as an arguement and will return whether or not the Stack contains in the boolean form.
+
+- The stack - Time Complexity Equations :
+ 
+       - Accessing is O(n) since if we wanted to access the object in the bottom of the stack we will have to pop off every value in the stack above it.
+
+       - Searching is O(n) since if we want to search for an object at the bottom it will have to go through every value above it.
+
+       - Inserting is O(1) Since using the Push(Object) method only requires one operation
+
+       - Deleting is O(1) since using the Pop() method only requires one operation
+
+- Stacks are used everywhere, both in the actual writing of code as well as in real-world situations.
+
+       - Recursion : The process of functions repeatedly calling themselves.
+
+       - Undo/Redo
+
+       - Back-Paging
+
+- The Stack - Conclusion : May seem useless but is very useful.
+
+
+  # The Queue
+
+- The Queue : A sequential access data structure which follows the FIFO methodology
+
+       - First In First Out (FIFO) we can think of it as a line to an ice cream store the first one to get there will be the first to get his ice cream.
+
+       - In the Queue we add elements from the back (left side also known as the tail) and we remove them from the front (right side also known as the head).
+
+- Comparing Stack and Queue
+
+   Stack :            Queue
+
+ Push method        Enqueue Method
+
+ Pop method         Dequeue Method
+
+ Peek Method        Peek Method
+
+ Contains Method    Contains Method
+
+- The queue-Enqueue Method  Enqueue(Object)
+
+        - Adds an element to the tail of the Queue
+
+- Dequeue Method  Dequeue(Object)
+
+        - Removes elements from the head of the Queue.
+
+- Peek Method Peek()
+
+        - Returns the oject at the head of the tail without removing it
+
+- Contains Method Contains(Object)
+
+        - Returns whether or not the Queue contains an object.
+
+- Time Complexity Equations-Queue
+
+        - Accessing is O(n) since we need to Dequeue every element if we want an obkect from the tail.
+
+        - Searching is O(n) for the same reason as accessing
+
+        - Inserting is O(1) since we are Enqueueing at a single point
+
+        - Deleting is O(1) since we are Dequeueing at a single point
+
+- The Queue-Common Queue uses : Queues are used very often in programming, for a variety of functions : 
+
+        - Job Scheduling : The process through which the computer determines which tasks to complete for the user and when. Like opening up a web page or a progam.
+
+        - Printer Queueing : Determines which documents get printed first
+
+        - Modern Cameras : Google uses them in their pixel phones to enable what's known as zero shutter lag used to eliminate the time in which you take the picture
+          and what the phone actually captures.
+
+- The Queue-Conclusion : Seems Useless but is very useful.
+
+  # The LinkedList  
+
+- The LinkedList is a sequential access linear data structure in which every element is a separate object called a Node, which has 2 parts.
+
+    - The data
+
+    - The reference (or pointer) which points to the next Node in the List.
+
+- The data part of the node contains the value we store such as the strings or integers...etc. The reference simply points to the next node.
+
+- Visualization of the LinkedList
+
+Example 1 :
+
+  Head Node
+
+Data  Reference
+
+ 1                      since there is no reference the pointer will reference null and is used as a place holder until we give it something to reference.
+
+Example 2 :
+
+ Head Node                  Tail Node
+
+Data  Reference        Data  Reference
+
+ 1        ---------->    2      ---------> Null          The last node in a linked list is called a tail node and it tells the computer that we reached the end of out list
+                                                                    and that there is no more values.
+
+Example 3 :
+
+ Head Node                                      Tail Node
+
+Data  Reference        Data  Reference      Data  Reference
+
+ 1        ---------->    2      --------->   3      ----------> Null
+
+- Adding and Rewmoving Information from a LinkedList
+
+     - Data flow in and out of any point of a LinkedList
+
+     - We can Add to the head, remove from the head, add to the middle, remove from the middle, add to the tail, remove from the tail
+
+- We will use this example to help us understand the way it works : 
+
+ Head Node                                      Tail Node
+
+Data  Reference        Data  Reference      Data  Reference
+
+ 1        ---------->    2      --------->   3      ----------> Null
+
+- Adding to the Head of a linked list
+
+     - All we need to do is make the new Node's pointer point to the current Head of the LinkedList
+
+Example :
+
+                                                  Tail Node
+
+  Data  Reference        Data  Reference      Data  Reference
+
+   1        ---------->    2      --------->   3      ----------> Null
+   ^
+   |         Head Node
+   |
+   |    Reference   Data 
+   |
+   ---------         0
+
+
+
+- Removing from the Head of a Linked List
+
+      - All we need to do  is set the Head Node's pointer to a null value. It will get cut off from the flow of information thus being removed from the list.
+
+
+     Head Node                                 Tail Node
+
+  Data  Reference        Data  Reference      Data  Reference
+
+   1        ---------->    2      --------->   3      ----------> Null
+
+
+  Data Reference 
+
+   0        ----------> null
+
+
+
+- Adding a Node to the Middle of a LinkedList
+
+      - We need to make the pointer of the new node point to the node adter the location we want to insert at.
+
+      - We set the node before the location we want to insert in at the point towards the new Node
+
+
+
+ Head Node                                                           Tail Node
+
+Data  Reference        Data  Reference    Data  Reference      Data  Reference
+
+ 1        ---------->  1.5      -------->  2       --------->   3      ----------> Null
+
+- removing a Node from the middle of a LinkedList
+
+      - We need to set the pointer of the previous node to the node after the one we want to delete
+
+
+ Head Node         ------------------------                              Tail Node
+                   |                      | 
+Data  Reference    |    Data  Reference   |      Data  Reference      Data  Reference
+                   |                      |
+ 1        ----------    1.5      |        ---->   2       --------->   3      ----------> Null
+                                 |                                                         ^
+                                 |                                                         |
+                                 -----------------------------------------------------------
+
+- Adding to the Tail of a LinkedList
+
+      - We need to make the current tail point towards the new Node you want to add.
+
+     Head Node                                                        Tail Node
+
+  Data  Reference        Data  Reference      Data  Reference       Data  Reference          
+
+   1        ---------->    2      --------->   3      ---------->    4      ----------> Null 
+
+- Removing the tail of a LinkedList
+
+     - We just need to set the previous tail to point at a null value. this will cut off of the LinkedList.
+
+
+     Head Node                                  Tail Node
+
+  Data  Reference        Data  Reference      Data  Reference
+
+   1        ---------->    2      --------->   3      ----------> Null       
+
+- Time Complexity equations for LinkedLists
+
+     - Accessing is O(n) since it's a sequantial access data structure meaning that it will have to go through every value to reach the last one.
+
+     - Searching is O(n) since if we want to check if a node exists we will have to get through every node if it's the last one.
+
+     - Inserting is O(1) for the head and tail but O(n) for the middle part since we will have to get all the way from the start to the middle.
+
+     - Deleting is O(1) for the head and tail but O(n) for the middle part since we will have to get all the way from the start to the middle.            
+
+- Uses for LinkedLists : We can use LinkedLists in the backing of other data structures.
+
+     - We can use LinkedLists to make Stacks, Queues, etc.
+
+     - Examples would be songs in a playlist. When the song contains different types of data such as 'title, wav(sound), length' is finished it will point to the next song.
+
+- The big Drawback for using a LinkedList is that we can only go forward. Never backwards.
+
+  # The Doubly-LinkedList
+
+- The Doubly-LinkedList is almost the same as the LinkedList it is a sequential access data structure which stores data in the form of Nodes.
+
+     - Able to traverse both forwards and backwards using pointers.
+     
+     - It has three parts :   Previous Node  <----- Previous Pointer - Data - Next Pointer --------> Next Node
+
+- Visualization of the Doubly-LinkedList
+
+'Next' = that particular Nodes pointer which points to the next object in the List
+
+'Previous' = That particular Nodes pointer which points to the previous object in the List.
+
+Example : 
+
+       Head Node
+ 
+  -----  1 --------                          '1' is the data <--- is the previous pointer . -------------> is the next pointer
+  |               |
+  |               |
+  ----->Null<------
+
+Example 2 :
+
+       Head Node            Tail Node
+ 
+  -----  1 -------><----- 2 -----------
+  |                                   |
+  |                                   |
+  ---------------->Null<--------------- 
+
+Example 3 : 
+
+       Head Node                              Tail Node
+ 
+  -----  1 -------><----- 2 ------><----- 3 --------------
+  |                                                      |
+  |                                                      |
+  -------------------------->Null<------------------------ 
+
+
+- The Doubly-LinkedList Adding and removing information 
+
+         - We can either add to the head or remove from it, add to the taal or remove from it, add to the middle or remove from it.
+
+- We will use this example to help us under stand the doubly-LinkedList
+
+
+       Head Node                                Tail Node
+ 
+  ----- 'Adam' -------><----- 'Ben' ------><----- 'Carl' ------
+  |                                                           |
+  |                                                           |
+  -------------------------->Null<----------------------------- 
+
+- Adding to the head of a Doubly-LinkedList
+
+        - We set the new Nodes to point towards the current head of the List
+
+        - Take the new Node that we want to insert and set it's previous to null
+ 
+        - Set the current's head previous towards the new Node
+
+
+
+                                                 Tail Node
+ 
+  -----> 'Adam' -------><----- 'Ben' ------><----- 'Carl' -----
+  |                                                           |
+  |                                                           |
+  |                          Null<----------------------------- 
+  |    Head Node              ^
+  |                           |
+  ----->'Abe'------------------
+
+- removing from the Heaad of a Douby-LinkedList
+
+        - Set the head node's next to the point towards the null value
+
+        - Set the second node's previous to also point towards a null value
+
+
+       Head Node                                Tail Node
+ 
+  ------ 'Adam' -------><----- 'Ben' ------><----- 'Carl' -----
+  |                                                           |             
+  |                                                           |                 
+  --------------------------->Null<---------------------------- 
+  |                           ^
+  |                           |
+  -----'Abe'-------------------
+
+
+
+Since the Abe node doesn't have any nodes pointed to anything and nothing is pointed at it.It will be deleted from the list. The list becomes:
+
+       Head Node                                Tail Node
+ 
+  ----- 'Adam' -------><----- 'Ben' ------><----- 'Carl' ------
+  |                                                           |
+  |                                                           |
+  -------------------------->Null<----------------------------- 
+
+
+- Inserting into the middle of a Doubly-LinkedList
+
+     - We set the new node's previous to point towards the Node previous to the position you want to insert
+
+     - We set the new node's next to point towards the node adter the position you want to insert at.
+
+     - We set the next and the previous on the Node's before and after the one you're inserting to point towards the new node.
+
+
+       Head Node                                Tail Node
+ 
+  ----- 'Adam' -------    ----- 'Ben' ------><----- 'Carl' ----
+  |                  |    |                                   |
+  |                  |    ---------------                     |
+ \_/                 |                  |                    \_/
+ Null                ---><-- 'Chris' -><-                   Null
+
+- Removing from the middle of a Doubly-LinkedList
+
+      - We set the Node before the one we want to remove's next to point towards the node after the one we want to remove.
+
+      - Set the Node after the one we want to remove's previous to point towards the Node before the one we want to remove.
+
+      - Set both pointers of the Node we want to remove to point towards the null value   
+
+
+       Head Node                                Tail Node
+ 
+  ----- 'Adam' --------><------ 'Ben' ------><----- 'Carl' ----
+  |                                                           |
+  |                                                           |
+ \_/                                                         \_/
+ Null<-------------------------'Chris'---------------------> Null
+
+This will mean that Chris will be cut off :
+
+       Head Node                                Tail Node
+ 
+  ----- 'Adam' -------><----- 'Ben' ------><----- 'Carl' ------
+  |                                                           |
+  |                                                           |
+  -------------------------->Null<----------------------------- 
+
+
+- Adding to the tail of a Doubly-LinkedList 
+
+      - Set the next pointer of the current tail to point towards the new Node we want to become the tail.
+
+      - Set the previous of the new node that we're adding to be pointing towards the current tail of the List.
+
+      - Make the Node's next point towards a null value.
+
+
+
+       Head Node                                Tail Node
+ 
+  ----- 'Adam' -------><----- 'Ben' ------><----- 'Carl' ------><----'Ethan'------
+  |                                                                              |
+  |                                                                              |
+  -------------------------------------->Null<------------------------------------
+
+- removing from the tail of the Doubly-LinkedList
+
+       - Set the Node's previous to point towards null
+
+       - Set the second to the last Node's next to point towards null
+
+
+       Head Node                                Tail Node
+ 
+  ----- 'Adam' -------><----- 'Ben' ------><----- 'Carl' ------  ----'Ethan'------
+  |                                                           |  |               |
+  |                                                           |  |               |
+  -------------------------------------->Null<------------------------------------
+
+
+Since Ethan has nothing pointed to it or it pointing to nothing  it will be cut off.
+
+       Head Node                                Tail Node
+ 
+  ----- 'Adam' -------><----- 'Ben' ------><----- 'Carl' ------
+  |                                                           |
+  |                                                           |
+  -------------------------->Null<----------------------------- 
+
+- Time Complexity Equations of the Doubly-LinkedList Exactly the same as LinkedLists for the exact same reasons.
+
+     - Accessing is O(n) since it's a sequantial access data structure meaning that it will have to go through every value to reach the last one.
+
+     - Searching is O(n) since if we want to check if a node exists we will have to get through every node if it's the last one.
+
+     - Inserting is O(1) for the head and tail but O(n) for the middle part since we will have to get all the way from the start to the middle.
+
+     - Deleting is O(1) for the head and tail but O(n) for the middle part since we will have to get all the way from the start to the middle.      
+
+- Used for a Doubly-LinkedLists 
+
+     - The back and forth functionality of a Doubly-Linked Lists lends itself to be implemented in a lot of Stack-like functionality
+
+     - Browsers which allow you to go back and forth through web pages use LinkedLists
+
+     - The undo redo functionalities in many programs.
+
+     - Applications which allow you to open up recently used functionalities.
+
+-  Conclusion for The Doubly-LinkedList : It is a great way to store information it makes it alot easier to move information around.
+
+   # Dictionaries
+
+- Dictionaries are one of the most abstract data structures you'll see.
+
+    - They are also called Maps and Associative Arrays
+
+    - it stores data in the form of key/value pairs
+
+    - Think of the key as a social security number and the value of the key is the person using it.
+
+- We index dictionaries using these keys instead of a numerical index.
+
+- The key's in a key/value pair can be pretty much any primitive data type you can think of. Such as 'Integers, floats, strings...'
+
+- The values are also very flaxible you can even store a dictionary within a dictionary
+
+- However there are 2 extremly important restrictions when it comes to dictionaries
+
+     - Every key can appear only once within the dictionary
+
+     - Each key can only have one value
+
+- But we can still have duplicates of values within a dictionary.
+
+- Hash tables are fundamentally a way to store this information in such a way that we're anle to cut down the amount of nil values while also allowing for the information
+  to be stored in a way that is easily accessible.
+
+     - We can do that using a Hash Function
+
+- A Hash Function will take all the keys for a given dictionary and strategically map them to certain index locations in an array so that they eventually be retrieved easily.
+
+- The goal of a good hashing function is to take in a key and reliably place it somewhere in the table so that it can be accessed later by the computer.
+
+- Hash Function : Take the key, divide it by itself, then multiply the result by the number of digits in the key minus 1.
+
+Example : 
+
+1,000,000 would become 1,000,000 / 1,000,000 = 1 * 7 = 7 - 1 = 6 so the index would be 6.
+
+- Dictionaries are built upon these Hash Tables, and the key's in our key/value pairs are stored in these hash tables at indexes which are determined by a hash function.
+
+- We have a small issue in hash tables because sometimes 2 different values can be stored at the same index. This is called Hash Collision 
+
+     - It can be solved in 2 ways : Open Addressing, closed addressing
+
+     - Open Addressing we put the key in some other index location separate from the one returned to us by the hash function.
+
+               - This will move the value to the closest nil index
+
+               - However Open Addressing has flaws since if we had another value that's stored where we moved our previous index problems whould occur.
+
+     - Closed Addressing uses Linked Lists to chain together keys which result in the same hash value
+
+               - This means that the two collided hashes will be stored in the same index as a form of Linked List
+
+               - The only drawback for using this is that when we have to look for a certain value in the index with the Linked List we will have to go through every value
+                    till we eventually find it.
+
+- Dictionaries - Time Complexity Equations 
+
+- We Generally measure a data structure based on it's worst-case scenario in this case it would having every value stored in the same index meaning that they will form
+a Linked List on a single index. It will cause O(n) for all 4 Equations. However this is a very rare occurance since we never have a case with all values on the same index.
+
+- If we look at a normal case, to access , search for , insert, or delete a key/value  pair from our dictionary, all we need to do is run that key throughout hash 
+function and it'll tell us what index in the hash table to go to in order to perform that operation. This will result in an O(1) for all 4 values.
+
+- Conclusion : Dictionaries are a very useful data structure when it comes to Computer Science for a few reasons.
+
+     - The option for non-numerical indexes
+
+     - The flexibility when it comes to making keys
+
+     - The speed which comes with the hash table implementation
+
+  # Trees
+
+- Every Data Structure covered earlier until this point was being stored linearly
+
+- Trees store data hierarchically as opposed to linearly.
+
+      - A way to help us understand heirarchically data would be a family tree : Each person would be an element in the family tree and connections wouldn't be based
+           on the simple linear fashion but rather connections would be more abstract and can lead to multiple paths and branches, instead of a single data point. Each
+           generation is ordered on a heirarchy 
+
+      - Another example would be file structure system on a computer. We start with a base folder on the desktop we might have 4 folders inside this folder and each 
+           folder can contain multiple folders which can also contain more folders until you finally reach your documents.
+
+- A Tree
+
+      - An abstract Data Structure which contains a series of linked nodes connected together to form a heirarchical representation of information.
+
+      - Like a LinkedList but each Node has the option of pointing towards multiple node.
+
+      - Also it can branch of on it's own and it can not point to any other nodes.
+
+             (50)<--------------- The Topmost Node of a tree is called Root Node is also a parent Node because it has 1 or more child Nodes.
+              |
+          --------- <----------------- And the bonds between the vertices are called Edges.                    
+          |       |
+-------->(20)    (30) <---------------- These nodes can also be called Vertices and they are Child nodes since it has an edge connected to it by another Node 1 level above it.
+|                 |                         However they are parents with respect to vertices 15 and 15 but children with respect to node 50.
+|               ------    
+|               |    |    
+|             (10)  (15) 
+|               |    ^
+|              (5)   |
+|               ^    |
+------------------------- This is known as a leaf node which does not have any child nodes. 
+
+
+- Height ( Property of the Tree) : Number of edges on the longest possible path down towards a leaf. So the height of the tree would be three
+
+- Depth ( Property of a Node) : Number of edges requires to get from that paricular node to the root node. So (30) would have 1 depth. (15) would have depth of 2.
+
+- Regular trees are great for storing hierarical data, but their power can really be heightened when you start messing around with how the data is actually stored within them.
+
+- Different types of trees
+
+      - Binary Search Tree : Is a simple variation on the standard tree which has three restrictions on it to help organize the data.
+
+              - A Node can have at most 2 children
+ 
+              - for any given parent Node, the child to the left has a value less than or equal to itself, and the child to the right has a value greater than or equal to itself.
+
+                     Example  :      (50)
+                                      |
+                                   -------
+                                   |     |
+                                  (25)  (75)
+
+              - No 2 nodes can contain the same value
+  
+     - The Biggest advantage of Binary Search Trees is that we're able to search through them in Logarithmic Time.
+
+              - We can tell the computer to go left if the value we're searching for is less than the corrent Node
+
+              - And to go right if the value we're searching for is greater than the current Node
+
+              - This will enable us to search through the tree in a way to find our disired node. It will take O(log n)
+
+     - Makes them extremly popular for storing large quantities of data that need to be easily searchable.
+              
+              - Also translates to accessing, inserting and deletin Nodes.
+
+- Used for Trees
+
+    - Storing data in the Hierarchical Data structure
+
+ # Tries
+
+- The Trie is often overlooked since it is only used in specific situations. (They are sometimes called visual trees or prefix trees)
+
+- A Trie is a tree-like data structure whose nodes store letters of an alphabet in the form of characters.
+
+- We can carefully construct this tree of characters in such a way which allows us to quickly retrieve words in the form of Strings by traversing down a path of the 
+trie in a certian way
+
+- Visualization of the trie
+
+                                   ( )<-------- Root Node. It starts with no value. It will also have a reference.                  
+                                    | 
+                                   (D)<---------- This node will have 2 references 
+                                    |
+                              -------------
+                              |           |
+         3 refrences-------->(A)         (E)
+                              |           |    
+                           -------      -----
+                           |  |  |      |   |
+                          (B)(D)(Y)    (W) (N)
+                                            |
+                                           (V)
+                                            |
+                                           (E)
+                                            |
+                                           (R)
+
+- Let's say we wanted the word 'Den' however the path doesn't stop at 'N' so how do we get the value?
+
+      - The answer is flagging. Flagging : Marking the end of a word by having it also point towards a 'flag' to let the computer know that the end of a word has occured.
+
+      - It will look like this : 
+
+                                   ( )                
+                                    | 
+                                   (D) 
+                                    |
+                              -------------
+                              |           |
+         3 refrences-------->(A)         (E)
+                              |           |    
+                           -------      -----
+                           |  |  |      |   |
+                          (B)(D)(Y)    (W) (N)----->(.)
+                                            |
+                                           (V)
+                                            |
+                                           (E)
+                                            |
+                                           (R)
+
+
+- Tries are used for things such as the autocomplete feature.
+
+- Big Programs like IOS or google docs don't just store tries containing a few words or even all words starting with a cartain letter. They're storing the entire 
+       English dictionary.
+
+- Conclusion tries are very useful but in very specific situations.
+
+   # Heaps
+
+- A Heap
+
+     - A special tree where all parent Nodes compare to their children Node's in some specific way by being more or less extreme.
+
+           - Either greater than or less than.
+
+           - Determines where the data is stored.
+     
+           - Usually dependent on the parents Node's value.
+
+- Min-Heaps 
+
+     - The value at the Root Node of the tree must be the minimum amongst all of its children.
+
+     - This fact must be the same recrusively for all parent Node's contained within the Heap. 
+
+- Max-heaps
+     
+     - The value at the Root Node of the tree must be the maximum amongst all of its children.
+
+     - This fact must be the same recrusively for all parent Node's contained within the Heap. 
+
+- Building Heaps
+
+     - If we want to build a Max Heap. We need to follow some steps.
+
+           - Let's assume that we have an array with indexes from 0 to 6 with random values(all integers).
+
+           - We add the first integer(index 0) as the root node
+ 
+           - We add the second integer( index 1) as the child of the root node to the left
+
+           - Final Step is to go up the tree and swap nodes if necessary
+
+                   - Either greater than or less than the node above it.
+
+- Deleting from Heaps
+
+      - If we want to remove the root Node, we also need to follow 3 steps :
+
+            - Remove the root node from our heap
+
+            - Replace it with the Node furthest to the right.
+
+            - 'Heapify' fix the Heap by comparing parent Node's to their children and swapping if necessary.
+
+- Heaps are most commonly used in the implementation of HeapSort
+
+      - A sorting algorithim which takes in a list of elements, bilds them into a min or max heap, and removes the root Node continiously to make a sorted list.
+
+- They can also be used for Priority Queues.
+
+      - They are an advanced data structure which your computer uses to designate tasls and assign computer power based on how urgent the matter is.
+
+      - Think of it as a line to a hospital.
+
+- Quick Review on Heaps 
+
+      - A special tree where all parent Nodes compare to their children Node's in some specific way by being more or less extreme.
+
+# Graphs 
+
+- A nonlinear Data Structure consisting of Nodes and Edges
+
+      - Finite set of Nodes (Vertices)
+
+      - Nodes are connected by the Edges
+
+- Graphs are similiear to trees in a way but they do not have a specific starting point.
+
+     Visually :                           Notationally :
+
+   (A)--(G)--(B)                         {A,B,C,D,E,F,G}  This describes the vertices
+    |    |    |           
+    |---(D)--(F)     {(A,G),(A,C),(G,D),(G,B),(B,F),(F,D),(F,E),(D,I),(I,E),(I,C)} This decribes the connections between vertices
+    |    |    |
+   (C)--(I)--(E)
+
+- Adjacent Nodes are the nodes connected through 1 edge. B is adjacent to F and G. G is adjacent to A and D....
+
+- An Undirected Graph 
+
+      - A Graph which the direction you traverse the Node isn't important
+
+           - Usually indicated by a lack of arrows
+
+- A Directed Graph 
+
+      - A Graph which the direction you traverse the NOdea is important
+
+           - Usually indecated by a arrows representing direction
+
+- A Cyclic Graph 
+
+      - One which contains a path from at least one Node back to itself
+
+      - All Undirected Graphs are Cyclical
+
+- An Acyclic Graph 
+ 
+      - One which contains no path from any one Node which leads back in on itself
+
+- Weighted Graphs
+
+      - Associating a numerical value with each edge (Cost)
+
+      - Each weight represents some property of the information you're trying to convey
+
+      - This means that we can have a certain edge with more weight than the other if it is longer.
+
+- Undirected Cyclical Graphs with weighted Edges. Can be used through Dijkstra's shortesr path algorithim.
+
+      - Compiles a list of the shortest possible paths from that source vertex to all Nodes within the Graph.
+
+      - It is used for google maps, in the process of IP routing, and even in telephone networks
+
+- Unweighted Cyclical Graphs ( Undirected and Directed) are used in the follow system of social media websites.
+
+      - Facebook, Snapchat, Instagram, Twitter, etc
+
+- Conclusion 
+
+      - Graphs are extremly useful and are used alot.
+
+
+
+     ALL DATA STRUCTURES TOGETHER :
+
+- Arrays , ArrayLists, Stacks, Queues, LinkedLists, Doubly-LinkedLists, Dictionaries, Hash Tables, Trees, Tries, Heaps, Graphs

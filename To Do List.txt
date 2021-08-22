@@ -1,0 +1,131 @@
+
+                                     To Do List:                              
+  
+
+- Master Python Basics          :   Done
+
+1. Variables
+2. Operators
+3. Control Flow
+4. Functions 
+5. Data Types
+6. Loops
+7. Create a Class
+8. Create an instance variable
+9. Use methods
+10. Inheritance
+
+- Data Structures                		: Done
+
+- Learn Java                     		: Done
+
+- Object Oriented Programming  	    		: Done
+	
+- 50 WPM                              		: Done
+
+- 60 WPM					: In Progress
+
+- Computer Science Courses        		: (2 out of 24)
+
+1. Programming Fundamentals            		: Done
+
+2. Programming 1                  		: Done
+
+3. Programming 2                  		: In Progress
+
+4. Computer Systems               		: Pending
+
+5. DataBases 1                    		: Pending
+
+6. Communications and Networking  		: Pending
+
+7. Calculus                       		: Pending
+
+8. Web Programming 1              		: Pending
+
+9. Opeating Systems 1             		: Pending
+
+10. Comparative Programming Languages  		: Pending
+
+11. Data Structures                   	  	: Pending
+
+12. Analysis of Algorithms 			: Pending
+
+13. Web Programming 2                 	 	: Pending
+	
+14. Software Engineering 2			: Pending
+
+15. Data Bases 2 				: Pending
+
+16. Operating Systems 2 			: Pending
+
+17. Information Retrieval 			: Pending
+
+18. Advanced Networking and Data Security       : Pending   
+
+19. Mobile Applications 			: Pending
+
+20. Computer Graphics				: Pending
+
+21. Data Mining and Machine Learning 		: Pending
+
+22. Artificial Intelligence			: Pending
+
+- Projects                                      : (4/15)
+
+	Beginner Projects:
+
+1. Password Generator  				: Done
+
+2. Choose your own Text Adventure Game		: Done
+
+3. Tic Tac Toe                                  : Done
+
+4. Build a website w/flask			: Done
+
+5. Web Scraper w/ beautiful or soup w/ selenium : In Progress
+
+	Intermediate Projects:
+
+1. 2D Games w/Python 				: Pending
+
+2. Microcontroller App w/rasberry pie		: (Requires purchase of a hardware $$$)
+
+3. Soduku Solver				: Pending
+
+4. Algorithim Visualizer			: Pending
+
+5. Project Scheduler				: Pending
+
+	Advanced Projects:
+
+1. Chess/Physics/Game Engine 			: Pending
+
+2. Build an Interpreter
+
+3. MAchine Learning or AI project
+
+4. Microcontroller project, eg security system	: (Requires purchase of a hardware $$$)
+
+5. MAake your own API web project		: Pending 
+
+- Get in GitHub                   		: Pending
+
+List of open source projects : Tensorflow( Machine learning framework)
+
+flask , Django , keras ( Neural network library), youtube-dl
+
+face_recognition ( It's in the name)
+
+ansible (open source tool that handles configuration management and 
+deployment or your system or application)
+
+httpie ( used for making cli interactions human friendly, can be used 
+for debugging , interacting with http servers or even testing)
+
+pandas( provides fast expressive flexible data structures packages)
+
+scikit-learn 
+
+
+
